@@ -43,8 +43,12 @@ public class Calculos {
      * @param texto
      * @return texto invertida
      */
-    String invertir(String texto) {
-        throw new UnsupportedOperationException("En construcción.");
+    String inverso(String texto) {
+    String invertida = "";
+    for (int i = texto.length() - 1; i >= 0; i--) {
+        invertida += texto.charAt(i);
     }
+    return invertida;
+}
 
 }
