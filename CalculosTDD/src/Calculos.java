@@ -43,9 +43,17 @@ public class Calculos {
      * @return cantidad de vocales
      */
     int vocales(String texto) {
-        throw new UnsupportedOperationException("En construcción.");
+    int contador = 0;
+    // Convertimos el texto a minúsculas para evaluar sin problemas
+    String t = texto.toLowerCase();
+    for (int i = 0; i < t.length(); i++) {
+        char c = t.charAt(i);
+        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+            contador++;
+        }
     }
-
+    return contador;
+}
     /**
      * *
      * Invierte el orden de las letras en cada palabra, pero no altera el orden
